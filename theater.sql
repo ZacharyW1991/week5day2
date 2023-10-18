@@ -14,6 +14,8 @@ CREATE TABLE ticket(
 ticket_id SERIAL PRIMARY KEY,
 price VARCHAR(30) NOT NULL,
 age_class VARCHAR(30) NOT NULL,
+movie_id INTEGER NOT NULL,
 FOREIGN KEY(movie_id) REFERENCES movie(movie_id),
+customer_id INTEGER NOT NULL,
 FOREIGN KEY(customer_id) REFERENCES customer(customer_id)
 );
